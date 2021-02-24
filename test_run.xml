@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<run>
+	<id>R33</id>
+	<name>Test Run 20.02.2021</name>
+	<description></description>
+	<config></config>
+	<createdon>2021-02-20T15:14:23Z</createdon>
+		<completed>false</completed>
+		<milestone></milestone>
+	<stats>
+										<passed>
+			<percent>47</percent>
+			<count>7</count>
+		</passed>
+											<blocked>
+			<percent>0</percent>
+			<count>0</count>
+		</blocked>
+											<untested>
+			<percent>0</percent>
+			<count>0</count>
+		</untested>
+											<retest>
+			<percent>0</percent>
+			<count>0</count>
+		</retest>
+											<failed>
+			<percent>53</percent>
+			<count>8</count>
+		</failed>
+																																																				</stats>	<sections>
+		<section>
+		<name>Панфилов</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>интерфейс пользователя</name>
+		<description></description>
+									</section>
+		<section>
+		<name>функциональный тест</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>Пудник</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Тестирование юзабилити</name>
+		<description></description>
+									</section>
+		<section>
+		<name>интерфейс пользователя</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Функциональные тесты</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Проверка работы кнопки&quot;Удалить выделенные файлы из списка&quot;</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+</sections>
+			</section>
+		<section>
+		<name>SHIsh</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Горяйнов</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>UI</name>
+		<description></description>
+									</section>
+		<section>
+		<name>функциональные тесты</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>Гаврилова</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Интерфейс пользователя</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Функц. тесты</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>Romanyuk</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Нефункциональные тесты (интерфейс пользователя).</name>
+		<description></description>
+						<tests>
+																																																																																																						<test>
+				<id>T2800</id>
+				<title>Размер кнопок в верхней строке  окна программы.</title>
+												<template>Test Case (Text)</template>
+																<type>Accessibility</type>
+																<priority>Low</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>1. Запустить тестируемую программу.
+2. Запустить графический редактор (Paint).</preconds>
+										<steps>1. Делаем скриншот окна программы (используя сочетание клавиш Alt+PrtScr).
+2. Вставляем изображение из буфера (используя сочетание клавиш Ctrl+V) в окно графического редактора (Paint).
+3. Измерим размер кнопки &quot;Найти и добавить файл в список&quot;. Для удобства измерения рекомендуется увеличить размер изображения используя масштабирование в правом нижнем углу. Для этого поместим курсор мышью в левый верхний угол измеряемой кнопки и, зажав левую кнопку мыши, переместим курсор в правый нижний угол измеряемой кнопки. В нижней строке графического редактора отобразиться три числовых значения. Нас интересует второе значение, это и есть размеры нашей кнопки в пикселях (длина на высоту).
+4. Измерим размер кнопки &quot;Удалить выделенные файлы из списка&quot;. Для этого поместим курсор мышью в левый верхний угол измеряемой кнопки и, зажав левую кнопку мыши, переместим курсор в правый нижний угол измеряемой кнопки. В нижней строке графического редактора отобразиться три числовых значения. Нас интересует второе значение, это и есть размеры нашей кнопки в пикселях (длина на высоту).
+5. Измерим размер кнопки &quot;Начать грузить&quot;. Для этого поместим курсор мышью в левый верхний угол измеряемой кнопки и, зажав левую кнопку мыши, переместим курсор в правый нижний угол измеряемой кнопки. В нижней строке графического редактора отобразиться три числовых значения. Нас интересует второе значение, это и есть размеры нашей кнопки в пикселях (длина на высоту).
+6. Измерим размер кнопки &quot;Приостановить&quot;. Для этого поместим курсор мышью в левый верхний угол измеряемой кнопки и, зажав левую кнопку мыши, переместим курсор в правый нижний угол измеряемой кнопки. В нижней строке графического редактора отобразиться три числовых значения. Нас интересует второе значение, это и есть размеры нашей кнопки в пикселях (длина на высоту).</steps>
+										<expected>Все кнопки окажутся одного размера.</expected>
+									</custom>
+												<caseid>C10</caseid>
+								<status>Failed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:32:20Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment>Кнопки имеют разный размер:
+-Кнопка &quot;Найти и добавить файл в список&quot; 35х28 рх.
+-Кнопка &quot;Удалить выделенные файлы из списка&quot; 32х25 рх.
+-Кнопка &quot;Начать грузить&quot; 32х32 рх.
+-Кнопка &quot;Приостановить&quot; 37х30 рх.</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2021-02-20T15:31:38Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>Кнопки имеют разный размер:
+-Кнопка &quot;Найти и добавить файл в список&quot; 35х28 рх.
+-Кнопка &quot;Удалить выделенные файлы из списка&quot; 32х25 рх.
+-Кнопка &quot;Начать грузить&quot; 32х32 рх.
+-Кнопка &quot;Приостановить&quot; 37х30 рх.</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2021-02-20T15:29:46Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment>Кнопки имеют разный размер:
+-Кнопка &quot;Найти и добавить файл в список&quot; 35х28 рх.
+-Кнопка &quot;Удалить выделенные файлы из списка&quot; 32х25 рх.
+-Кнопка &quot;Начать грузить&quot; 32х32 рх.
+-Кнопка &quot;Приостановить&quot; 37х30 рх.</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2021-02-20T15:28:35Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>Кнопки имеют разный размер:
+-Кнопка &quot;Найти и добавить файл в список&quot; 35х28 рх.
+-Кнопка &quot;Удалить выделенные файлы из списка&quot; 32х25 рх.
+-Кнопка &quot;Начать грузить&quot; 32х32 рх.
+-Кнопка &quot;Приостановить&quot; 37х30 рх.</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+															<change>
+						<createdon>2021-02-20T15:23:50Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment>Кнопки имеют разный размер:
+-Кнопка &quot;Найти и добавить файл в список&quot; 35х28 рх.
+-Кнопка &quot;Удалить выделенные файлы из списка&quot; 32х25 рх.
+-Кнопка &quot;Начать грузить&quot; 32х32 рх.
+-Кнопка &quot;Приостановить&quot; 37х30 рх.</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																													</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T2802</id>
+				<title>Простота, логичность и понятность интерфейса.</title>
+												<template>Test Case (Steps)</template>
+																<type>Accessibility</type>
+																<priority>Low</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запустить тестируемую программу.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected></step>
+<step>
+<index>2</index><content>Выбрать файл(ы) для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файл появится в окне &quot;Список файлов&quot; с указанием полного пути.</expected></step>
+<step>
+<index>3</index><content>Нажать на кнопку &quot;Выбрать папку, куда писать файлы&quot;.</content><expected>Откроется окно выбора места для копирования.</expected></step>
+<step>
+<index>4</index><content>Выбрать локацию и нажать на кнопку &quot;ОК&quot;.</content><expected>В окне &quot;to:&quot; появится полный путь к локации, куда будет скопирован файл(ы).</expected></step>
+<step>
+<index>5</index><content>Нажать кнопку &quot;Начать грузить&quot;.</content><expected>Начнется процесс копирования файла(ов) из списка в указанную локацию.</expected></step>
+<step>
+<index>6</index><content>При непустом окне &quot;Список файлов&quot; в квадратике слева от пути к копируемому файлу кликнуть левой кнопкой мыши.</content><expected>В  квадратике слева от пути к копируемому файлу появится галочка, обозначающая выделение файла.</expected></step>
+<step>
+<index>7</index><content>При наличие хотя бы одного отмеченного файла в окне &quot;Список файлов&quot; нажать на кнопку &quot;Удалить выделенные файлы из списка&quot;.</content><expected>Отмеченные файлы удалятся из списка в окне &quot;Список файлов&quot;.</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C127</caseid>
+								<status>Passed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:25:45Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment>Все результаты соответствуют ожиданиям.</comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>2</index><content>Выбрать файл(ы) для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файл появится в окне &quot;Список файлов&quot; с указанием полного пути.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>3</index><content>Нажать на кнопку &quot;Выбрать папку, куда писать файлы&quot;.</content><expected>Откроется окно выбора места для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>4</index><content>Выбрать локацию и нажать на кнопку &quot;ОК&quot;.</content><expected>В окне &quot;to:&quot; появится полный путь к локации, куда будет скопирован файл(ы).</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>5</index><content>Нажать кнопку &quot;Начать грузить&quot;.</content><expected>Начнется процесс копирования файла(ов) из списка в указанную локацию.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>6</index><content>При непустом окне &quot;Список файлов&quot; в квадратике слева от пути к копируемому файлу кликнуть левой кнопкой мыши.</content><expected>В  квадратике слева от пути к копируемому файлу появится галочка, обозначающая выделение файла.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>7</index><content>При наличие хотя бы одного отмеченного файла в окне &quot;Список файлов&quot; нажать на кнопку &quot;Удалить выделенные файлы из списка&quot;.</content><expected>Отмеченные файлы удалятся из списка в окне &quot;Список файлов&quot;.</expected><actual></actual><status>Passed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+								</tests>
+							</section>
+		<section>
+		<name>Функциональные тесты (тестирование взаимодействия).</name>
+		<description></description>
+						<tests>
+																																										<test>
+				<id>T2801</id>
+				<title>Копирование файлов различных типов и размеров.</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																<estimate>86400</estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Подготовить файлы различного типа и размера.
+|||:File type|:File size
+||    txt    |  1 kb 
+||    avi    |  1024 Mb
+||    mp3    |  8192 Mb
+||    pdf    |  10.3 Mb
+||    iso    |  3.3 Gb
+Запустить программу Hardload.
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected></step>
+<step>
+<index>2</index><content>Выбрать файл для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файл появится в окне &quot;Список файлов&quot; с указанием полного пути.</expected></step>
+<step>
+<index>3</index><content>Нажать на кнопку &quot;Выбрать папку, куда писать файлы&quot;.</content><expected>Откроется окно выбора места для копирования.</expected></step>
+<step>
+<index>4</index><content>Выбрать локацию и нажать на кнопку &quot;ОК&quot;.</content><expected>В окне &quot;to:&quot; появится полный путь к локации, куда будет скопирован файл.</expected></step>
+<step>
+<index>5</index><content>Поставить &quot;галочку&quot; в квадратик слева от имени копируемого файла в поле &quot;Список файлов&quot; и нажать на кнопку &quot;Копирование файлов&quot;.</content><expected>Выбранный файл успешно скопирован.</expected></step>
+<step>
+<index>6</index><content>Повторить со следующим файлом.</content><expected>Выбранный файл успешно скопирован.</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C23</caseid>
+								<status>Passed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:27:13Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>2</index><content>Выбрать файл для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файл появится в окне &quot;Список файлов&quot; с указанием полного пути.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>3</index><content>Нажать на кнопку &quot;Выбрать папку, куда писать файлы&quot;.</content><expected>Откроется окно выбора места для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>4</index><content>Выбрать локацию и нажать на кнопку &quot;ОК&quot;.</content><expected>В окне &quot;to:&quot; появится полный путь к локации, куда будет скопирован файл.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>5</index><content>Поставить &quot;галочку&quot; в квадратик слева от имени копируемого файла в поле &quot;Список файлов&quot; и нажать на кнопку &quot;Копирование файлов&quot;.</content><expected>Выбранный файл успешно скопирован.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>6</index><content>Повторить со следующим файлом.</content><expected>Выбранный файл успешно скопирован.</expected><actual></actual><status>Passed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T2803</id>
+				<title>Соответствие названия кнопки выполняемому действию.</title>
+												<template>Test Case (Steps)</template>
+																<type>Accessibility</type>
+																<priority>Low</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запустить тестируемую программу.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected></step>
+<step>
+<index>2</index><content>При непустом окне &quot;Список файлов&quot; в квадратике слева от пути к копируемому файлу отметить файл (кликнуть левой кнопкой мыши) затем нажать на кнопку &quot;Удалить выделенные файлы из списка&quot;.</content><expected>Отмеченные файлы удалятся из списка в окне &quot;Список файлов&quot;.</expected></step>
+<step>
+<index>3</index><content>При непустом окне &quot;Список файлов&quot; в квадратике слева от пути к копируемому файлу отметить файл (кликнуть левой кнопкой мыши); 
+нажать на кнопку &quot;Выбрать папку, куда писать файлы&quot;, выбрать локацию и нажать на кнопку &quot;ОК&quot;;
+нажать на кнопку &quot;Начать грузить&quot;.</content><expected>Начнется процесс копирования файла(ов) из списка в указанную локацию.</expected></step>
+<step>
+<index>4</index><content>При непустом окне &quot;Список файлов&quot; в квадратике слева от пути к копируемому файлу отметить файл (кликнуть левой кнопкой мыши); 
+нажать на кнопку &quot;Выбрать папку, куда писать файлы&quot;, выбрать локацию и нажать на кнопку &quot;ОК&quot;;
+нажать на кнопку &quot;Начать грузить&quot;;
+нажать на кнопку &quot;Остановить грузить&quot;.</content><expected>Копирование остановится.</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C128</caseid>
+								<status>Passed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:38:15Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected><actual>Открылось окно выбора файла(ов) для копирования.</actual><status>Passed</status></step>
+<step>
+<index>2</index><content>При непустом окне &quot;Список файлов&quot; в квадратике слева от пути к копируемому файлу отметить файл (кликнуть левой кнопкой мыши) затем нажать на кнопку &quot;Удалить выделенные файлы из списка&quot;.</content><expected>Отмеченные файлы удалятся из списка в окне &quot;Список файлов&quot;.</expected><actual>Отмеченные файлы удалились из списка в окне &quot;Список файлов&quot;.</actual><status>Passed</status></step>
+<step>
+<index>3</index><content>При непустом окне &quot;Список файлов&quot; в квадратике слева от пути к копируемому файлу отметить файл (кликнуть левой кнопкой мыши); 
+нажать на кнопку &quot;Выбрать папку, куда писать файлы&quot;, выбрать локацию и нажать на кнопку &quot;ОК&quot;;
+нажать на кнопку &quot;Начать грузить&quot;.</content><expected>Начнется процесс копирования файла(ов) из списка в указанную локацию.</expected><actual>Начался процесс копирования файла(ов) из списка в указанную локацию.</actual><status>Passed</status></step>
+<step>
+<index>4</index><content>При непустом окне &quot;Список файлов&quot; в квадратике слева от пути к копируемому файлу отметить файл (кликнуть левой кнопкой мыши); 
+нажать на кнопку &quot;Выбрать папку, куда писать файлы&quot;, выбрать локацию и нажать на кнопку &quot;ОК&quot;;
+нажать на кнопку &quot;Начать грузить&quot;;
+нажать на кнопку &quot;Остановить грузить&quot;.</content><expected>Копирование остановится.</expected><actual>Копирование остановилось.</actual><status>Passed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T2809</id>
+				<title>Копирование нескольких файлов одной задачей.</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Подготовить файлы различного типа и размера.
+|||:File type|:File size
+||    txt    |  1 kb 
+||    avi    |  1024 Mb
+||    mp3    |  8192 Mb
+||    pdf    |  10.3 Mb
+||    iso    |  3.3 Gb
+Запустить программу Hardload.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected></step>
+<step>
+<index>2</index><content>Выбрать файлы по списку для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файлы появятся в окне &quot;Список файлов&quot; с указанием полного пути к каждому файлу.</expected></step>
+<step>
+<index>3</index><content>Нажать на кнопку &quot;Выбрать папку, куда писать файлы&quot;.</content><expected>Откроется окно выбора места для копирования.</expected></step>
+<step>
+<index>4</index><content>Выбрать локацию и нажать на кнопку &quot;ОК&quot;.</content><expected>В окне &quot;to:&quot; появится полный путь к локации, куда будут скопированы файлы.</expected></step>
+<step>
+<index>5</index><content>Поставить &quot;галочки&quot; в квадратиках справа от имени каждого файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Копирование файлов&quot;.</content><expected>Выбранные файлы успешно скопированы.</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C141</caseid>
+								<status>Passed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:40:24Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>2</index><content>Выбрать файлы по списку для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файлы появятся в окне &quot;Список файлов&quot; с указанием полного пути к каждому файлу.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>3</index><content>Нажать на кнопку &quot;Выбрать папку, куда писать файлы&quot;.</content><expected>Откроется окно выбора места для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>4</index><content>Выбрать локацию и нажать на кнопку &quot;ОК&quot;.</content><expected>В окне &quot;to:&quot; появится полный путь к локации, куда будут скопированы файлы.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>5</index><content>Поставить &quot;галочки&quot; в квадратиках справа от имени каждого файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Копирование файлов&quot;.</content><expected>Выбранные файлы успешно скопированы.</expected><actual></actual><status>Passed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+																																																												<test>
+				<id>T2810</id>
+				<title>Дублирование файлов в списке на копирование.</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Critical</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запустить программу Hardload.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected></step>
+<step>
+<index>2</index><content>Выбрать файл для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файл появится в окне &quot;Список файлов&quot; с указанием полного пути к файлу.</expected></step>
+<step>
+<index>3</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected></step>
+<step>
+<index>4</index><content>Выбрать тот же самый файл и нажать на кнопку &quot;Открыть&quot;.</content><expected>Появится сообщение о дублировании файлов.</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C144</caseid>
+								<status>Failed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:44:59Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>2</index><content>Выбрать файл для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файл появится в окне &quot;Список файлов&quot; с указанием полного пути к файлу.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>3</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>4</index><content>Выбрать тот же самый файл и нажать на кнопку &quot;Открыть&quot;.</content><expected>Появится сообщение о дублировании файлов.</expected><actual>Файл продублировался в списке на копирование.</actual><status>Failed</status></step>
+</step_results>
+													</custom>
+											</change>
+															<change>
+						<createdon>2021-02-20T15:41:52Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>2</index><content>Выбрать файл для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файл появится в окне &quot;Список файлов&quot; с указанием полного пути к файлу.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>3</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>4</index><content>Выбрать тот же самый файл и нажать на кнопку &quot;Открыть&quot;.</content><expected>Появится сообщение о дублировании файлов.</expected><actual>Сообщение не появилось, файл скопирован повторно.</actual><status>Failed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T2811</id>
+				<title>Повторное копирование одного и того же файла.</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запустить программу Hardload.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected></step>
+<step>
+<index>2</index><content>Выбрать файл для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файл появится в окне &quot;Список файлов&quot; с указанием полного пути к файлу.</expected></step>
+<step>
+<index>3</index><content>Нажать на кнопку &quot;Выбрать папку, куда писать файлы&quot;.</content><expected>Откроется окно выбора места для копирования.</expected></step>
+<step>
+<index>4</index><content>Выбрать локацию и нажать на кнопку &quot;ОК&quot;.</content><expected>В окне &quot;to:&quot; появится полный путь к локации, куда будут скопированы файлы.</expected></step>
+<step>
+<index>5</index><content>Поставить &quot;галочку&quot; в квадратике справа от имени файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Копирование файлов&quot;.</content><expected>Выбранный файл успешно скопирован.</expected></step>
+<step>
+<index>6</index><content>Поставить &quot;галочку&quot; в квадратике справа от имени файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Копирование файлов&quot;.</content><expected>Появится сообщение &quot;Файл уже существует&quot;.</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C149</caseid>
+								<status>Failed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:43:57Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>2</index><content>Выбрать файл для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файл появится в окне &quot;Список файлов&quot; с указанием полного пути к файлу.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>3</index><content>Нажать на кнопку &quot;Выбрать папку, куда писать файлы&quot;.</content><expected>Откроется окно выбора места для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>4</index><content>Выбрать локацию и нажать на кнопку &quot;ОК&quot;.</content><expected>В окне &quot;to:&quot; появится полный путь к локации, куда будут скопированы файлы.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>5</index><content>Поставить &quot;галочку&quot; в квадратике справа от имени файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Копирование файлов&quot;.</content><expected>Выбранный файл успешно скопирован.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>6</index><content>Поставить &quot;галочку&quot; в квадратике справа от имени файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Копирование файлов&quot;.</content><expected>Появится сообщение &quot;Файл уже существует&quot;.</expected><actual>Соощение не появилось, файл скопирован повторно.</actual><status>Failed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T2812</id>
+				<title>Ручной ввод локации для копирования.</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запустить программу Hardload. Создать папку C:\Новая папка</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected></step>
+<step>
+<index>2</index><content>Выбрать файл для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файл появится в окне &quot;Список файлов&quot; с указанием полного пути к файлу.</expected></step>
+<step>
+<index>3</index><content>В нижней строке, в поле &quot;Папка,куда писать файлы&quot;, ввести путь к существующей папке C:\Новая папка. Поставить &quot;галочку&quot; в квадратике справа от имени файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Копирование файлов&quot;.</content><expected>Выбранный файл успешно скопирован.</expected></step>
+<step>
+<index>4</index><content>В нижней строке, в поле &quot;Папка,куда писать файлы&quot;, ввести путь к несуществующей папке C:\Новаяпапка. Поставить &quot;галочку&quot; в квадратике справа от имени файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Копирование файлов&quot;.</content><expected>Появится сообщение &quot;Путь для копирования не существует&quot;.</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C151</caseid>
+								<status>Failed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:47:10Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>2</index><content>Выбрать файл для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файл появится в окне &quot;Список файлов&quot; с указанием полного пути к файлу.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>3</index><content>В нижней строке, в поле &quot;Папка,куда писать файлы&quot;, ввести путь к существующей папке C:\Новая папка. Поставить &quot;галочку&quot; в квадратике справа от имени файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Копирование файлов&quot;.</content><expected>Выбранный файл успешно скопирован.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>4</index><content>В нижней строке, в поле &quot;Папка,куда писать файлы&quot;, ввести путь к несуществующей папке C:\Новаяпапка. Поставить &quot;галочку&quot; в квадратике справа от имени файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Копирование файлов&quot;.</content><expected>Появится сообщение &quot;Путь для копирования не существует&quot;.</expected><actual>Сообщение не появилось, копирование не осуществлено.</actual><status>Failed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T2813</id>
+				<title>Удаление файла из списка копирования.</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запустить программу Hardload.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected></step>
+<step>
+<index>2</index><content>Выбрать три файла для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файлы появятся в окне &quot;Список файлов&quot; с указанием полного пути к каждому файлу.</expected></step>
+<step>
+<index>3</index><content>Поставить &quot;галочку&quot; в квадратике справа от имени одного файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Удалить выделенные файлы из списка&quot;.</content><expected>Появится диалоговое окно Да/Нет. При нажатии &quot;Да&quot; файл исчезнет из окна &quot;Список файлов&quot;.</expected></step>
+<step>
+<index>4</index><content>В поле &quot;Список файлов&quot; навести курсор на файл и кликнуть левой кнопкой мыши. Нажать на кнопку &quot;Удалить выделенные файлы из списка&quot;.</content><expected>Появится диалоговое окно Да/Нет. При нажатии &quot;Да&quot; файл исчезнет из окна &quot;Список файлов&quot;.</expected></step>
+<step>
+<index>5</index><content>В поле &quot;Список файлов&quot; навести курсор на файл и кликнуть левой кнопкой мыши. Нажать на клавишу Del.</content><expected>Появится диалоговое окно Да/Нет. При нажатии &quot;Да&quot; файл исчезнет из окна &quot;Список файлов&quot;.</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C153</caseid>
+								<status>Failed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:47:56Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>2</index><content>Выбрать три файла для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файлы появятся в окне &quot;Список файлов&quot; с указанием полного пути к каждому файлу.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>3</index><content>Поставить &quot;галочку&quot; в квадратике справа от имени одного файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Удалить выделенные файлы из списка&quot;.</content><expected>Появится диалоговое окно Да/Нет. При нажатии &quot;Да&quot; файл исчезнет из окна &quot;Список файлов&quot;.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>4</index><content>В поле &quot;Список файлов&quot; навести курсор на файл и кликнуть левой кнопкой мыши. Нажать на кнопку &quot;Удалить выделенные файлы из списка&quot;.</content><expected>Появится диалоговое окно Да/Нет. При нажатии &quot;Да&quot; файл исчезнет из окна &quot;Список файлов&quot;.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>5</index><content>В поле &quot;Список файлов&quot; навести курсор на файл и кликнуть левой кнопкой мыши. Нажать на клавишу Del.</content><expected>Появится диалоговое окно Да/Нет. При нажатии &quot;Да&quot; файл исчезнет из окна &quot;Список файлов&quot;.</expected><actual>Не удалилось.</actual><status>Failed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T2814</id>
+				<title>Удаление нескольких файлов из списка копирования.</title>
+												<template>Test Case (Steps)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запустить программу Hardload.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected></step>
+<step>
+<index>2</index><content>Выбрать пять файлов для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файлы появятся в окне &quot;Список файлов&quot; с указанием полного пути к каждому файлу.</expected></step>
+<step>
+<index>3</index><content>Поставить &quot;галочку&quot; в квадратике справа от имени каждого файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Удалить выделенные файлы из списка&quot;.</content><expected>Появится диалоговое окно Да/Нет. При нажатии &quot;Да&quot; файлы исчезнут из окна &quot;Список файлов&quot;.</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C154</caseid>
+								<status>Passed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:48:19Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Нажать на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>Откроется окно выбора файла(ов) для копирования.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>2</index><content>Выбрать пять файлов для копирования и нажать на кнопку &quot;Открыть&quot;.</content><expected>Файлы появятся в окне &quot;Список файлов&quot; с указанием полного пути к каждому файлу.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>3</index><content>Поставить &quot;галочку&quot; в квадратике справа от имени каждого файла в поле &quot;Список файлов&quot;. Нажать на кнопку &quot;Удалить выделенные файлы из списка&quot;.</content><expected>Появится диалоговое окно Да/Нет. При нажатии &quot;Да&quot; файлы исчезнут из окна &quot;Список файлов&quot;.</expected><actual></actual><status>Passed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+								</tests>
+							</section>
+		<section>
+		<name>Нефункциональные тесты (удобство использования).</name>
+		<description></description>
+						<tests>
+																																										<test>
+				<id>T2804</id>
+				<title>Отображение описания выполняемой функции.</title>
+												<template>Test Case (Steps)</template>
+																<type>Usability</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запустить тестируемую программу.
+
+</preconds>
+										<steps_separated><step>
+<index>1</index><content>Навести курсор на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>В верхней строке справа появится надпись &quot;Найти и добавить файл в список&quot;.</expected></step>
+<step>
+<index>2</index><content>Навести курсор на кнопку &quot;Удалить выделенные файлы из списка&quot;.</content><expected>В верхней строке справа появится надпись &quot;Удалить выделенные файлы из списка&quot;.</expected></step>
+<step>
+<index>3</index><content>Навести курсор на кнопку &quot;Начать грузить&quot;.</content><expected>В верхней строке справа появится надпись &quot;Начать грузить&quot;.</expected></step>
+<step>
+<index>4</index><content>Навести курсор на кнопку &quot;Остановить грузить&quot;.</content><expected>В верхней строке справа появится надпись  &quot;Остановить грузить&quot;.</expected></step>
+<step>
+<index>5</index><content>Навести курсор на кнопку  &quot;Выбрать папку, куда писать файлы&quot;.</content><expected>В верхней строке справа появится надпись &quot;Выбрать папку, куда писать файлы&quot;</expected></step>
+<step>
+<index>6</index><content>Навести курсор на поле, справа от надписи &quot;to:&quot;.</content><expected>В верхней строке справа появится надпись &quot;Папка, куда писать файлы&quot;.</expected></step>
+<step>
+<index>7</index><content>Навести курсор на поле, ниже надписи &quot;Files&quot;.</content><expected>В верхней строке справа появится надпись &quot;Список файлов&quot;.</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C129</caseid>
+								<status>Passed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:49:34Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Навести курсор на кнопку &quot;Найти и добавить файл в список&quot;.</content><expected>В верхней строке справа появится надпись &quot;Найти и добавить файл в список&quot;.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>2</index><content>Навести курсор на кнопку &quot;Удалить выделенные файлы из списка&quot;.</content><expected>В верхней строке справа появится надпись &quot;Удалить выделенные файлы из списка&quot;.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>3</index><content>Навести курсор на кнопку &quot;Начать грузить&quot;.</content><expected>В верхней строке справа появится надпись &quot;Начать грузить&quot;.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>4</index><content>Навести курсор на кнопку &quot;Остановить грузить&quot;.</content><expected>В верхней строке справа появится надпись  &quot;Остановить грузить&quot;.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>5</index><content>Навести курсор на кнопку  &quot;Выбрать папку, куда писать файлы&quot;.</content><expected>В верхней строке справа появится надпись &quot;Выбрать папку, куда писать файлы&quot;</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>6</index><content>Навести курсор на поле, справа от надписи &quot;to:&quot;.</content><expected>В верхней строке справа появится надпись &quot;Папка, куда писать файлы&quot;.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>7</index><content>Навести курсор на поле, ниже надписи &quot;Files&quot;.</content><expected>В верхней строке справа появится надпись &quot;Список файлов&quot;.</expected><actual></actual><status>Passed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T2805</id>
+				<title>Соответствие описания названию кнопок.</title>
+												<template>Test Case (Steps)</template>
+																<type>Usability</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запустить тестируемую программу.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Навести курсор на кнопку с изображением &quot;...&quot; в верхней строке слева.
+</content><expected>В верхней строке справа появится надпись &quot;Найти и добавить файл в список&quot;.</expected></step>
+<step>
+<index>2</index><content>Навести курсор на кнопку с изображением красного крестика в верхней строке.</content><expected>В верхней строке справа появится надпись &quot;Удалить выделенные файлы из списка&quot;.</expected></step>
+<step>
+<index>3</index><content>Навести курсор на кнопку с изображением зеленого треугольника в верхней строке.</content><expected>В верхней строке справа появится надпись &quot;Начать копирование&quot;.</expected></step>
+<step>
+<index>4</index><content>Навести курсор на кнопку с изображением двух вертикальных линий в верхней строке.</content><expected>В верхней строке справа появится надпись &quot;Приостановить копирование&quot;.</expected></step>
+<step>
+<index>5</index><content>Навести курсор на кнопку с изображением &quot;...&quot; в нижней строке справа.
+
+</content><expected>В верхней строке справа появится надпись &quot;Выбрать папку, куда писать файлы&quot;</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C130</caseid>
+								<status>Passed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:51:00Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Passed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Навести курсор на кнопку с изображением &quot;...&quot; в верхней строке слева.
+</content><expected>В верхней строке справа появится надпись &quot;Найти и добавить файл в список&quot;.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>2</index><content>Навести курсор на кнопку с изображением красного крестика в верхней строке.</content><expected>В верхней строке справа появится надпись &quot;Удалить выделенные файлы из списка&quot;.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>3</index><content>Навести курсор на кнопку с изображением зеленого треугольника в верхней строке.</content><expected>В верхней строке справа появится надпись &quot;Начать копирование&quot;.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>4</index><content>Навести курсор на кнопку с изображением двух вертикальных линий в верхней строке.</content><expected>В верхней строке справа появится надпись &quot;Приостановить копирование&quot;.</expected><actual></actual><status>Passed</status></step>
+<step>
+<index>5</index><content>Навести курсор на кнопку с изображением &quot;...&quot; в нижней строке справа.
+
+</content><expected>В верхней строке справа появится надпись &quot;Выбрать папку, куда писать файлы&quot;</expected><actual></actual><status>Passed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T2806</id>
+				<title>Изменение размера окна программы.</title>
+												<template>Test Case (Steps)</template>
+																<type>Usability</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запустить тестируемую программу.</preconds>
+										<steps_separated><step>
+<index>1</index><content>Навести курсор на нижний правый угол до появления диагональной стрелки. Затем зажать левую кнопку мыши и отвести курсор в сторону.</content><expected>Размер окна изменился.</expected></step>
+<step>
+<index>2</index><content>Навести курсор на символ &quot;квадратик&quot; в верхнем правом углу окна программы и нажать левую кнопку мыши..</content><expected>Окно развернется во весь экран.</expected></step>
+<step>
+<index>3</index><content>Навести курсор на верхнее поле окна (где надпись &quot;hardload&quot; и дважды кликнуть левой кнопкой мыши.</content><expected>Окно развернется во весь экран.</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C131</caseid>
+								<status>Failed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:52:19Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Навести курсор на нижний правый угол до появления диагональной стрелки. Затем зажать левую кнопку мыши и отвести курсор в сторону.</content><expected>Размер окна изменился.</expected><actual>Размер окна не изменился.</actual><status>Failed</status></step>
+<step>
+<index>2</index><content>Навести курсор на символ &quot;квадратик&quot; в верхнем правом углу окна программы и нажать левую кнопку мыши..</content><expected>Окно развернется во весь экран.</expected><actual>Размер окна не изменился.</actual><status>Failed</status></step>
+<step>
+<index>3</index><content>Навести курсор на верхнее поле окна (где надпись &quot;hardload&quot; и дважды кликнуть левой кнопкой мыши.</content><expected>Окно развернется во весь экран.</expected><actual>Размер окна не изменился.</actual><status>Failed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T2807</id>
+				<title>Добавление файла(ов) в список перетаскиванием мышью.</title>
+												<template>Test Case (Steps)</template>
+																<type>Usability</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запустить тестируемую программу. В соседнем окне открыть папку, откуда предполагается взять файлы для копирования.</preconds>
+										<steps_separated><step>
+<index>1</index><content>В окне папки, откуда предполагается копирование файла(ов), навести курсор на копируемый файл и, нажав левую кнопку мыши перетащить файл в поле &quot;Список файлов&quot; программы Hardload.</content><expected>Файл появится в поле  &quot;Список файлов&quot; программы Hardload.</expected></step>
+<step>
+<index>2</index><content>В окне папки, откуда предполагается копирование файлаов, выделить файлы для копирования. Затем навести курсор на выделенные файлы и, нажав левую кнопку мыши перетащить файлы в поле &quot;Список файлов&quot; программы Hardload.</content><expected>Файлы появится в поле  &quot;Список файлов&quot; программы Hardload.</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C132</caseid>
+								<status>Failed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:54:00Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>В окне папки, откуда предполагается копирование файла(ов), навести курсор на копируемый файл и, нажав левую кнопку мыши перетащить файл в поле &quot;Список файлов&quot; программы Hardload.</content><expected>Файл появится в поле  &quot;Список файлов&quot; программы Hardload.</expected><actual>Файл не появился в списке копирования.</actual><status>Failed</status></step>
+<step>
+<index>2</index><content>В окне папки, откуда предполагается копирование файлаов, выделить файлы для копирования. Затем навести курсор на выделенные файлы и, нажав левую кнопку мыши перетащить файлы в поле &quot;Список файлов&quot; программы Hardload.</content><expected>Файлы появится в поле  &quot;Список файлов&quot; программы Hardload.</expected><actual>Файлы не появились в списке копирования.</actual><status>Failed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+																																													<test>
+				<id>T2808</id>
+				<title>Изменение списка файлов с помощью правой клавиши мыши.</title>
+												<template>Test Case (Steps)</template>
+																<type>Usability</type>
+																<priority>Medium</priority>
+																<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запустить тестируемую программу. Нажать на кнопку &quot;Найти и добавить файл в список&quot;.Выбрать файл для копирования и нажать на кнопку &quot;Открыть&quot;. Файл появляется в окне &quot;Список файлов&quot; (с указанием полного пути).</preconds>
+										<steps_separated><step>
+<index>1</index><content>Навести курсор на фал в поле &quot;Список файлов&quot; Hardload. Нажать правую кнопку мыши.</content><expected>Появляется меню в выпадающем списке.</expected></step>
+<step>
+<index>2</index><content>Проверить действия из выпадающего списка.</content><expected>Действия выполняются.</expected></step>
+</steps_separated>
+									</custom>
+												<caseid>C140</caseid>
+								<status>Failed</status>
+								<assignedto></assignedto>
+												<inprogress></inprogress>
+																																																																																						<changes>
+															<change>
+						<createdon>2021-02-20T15:54:55Z</createdon>
+																		<createdby>Ярослав Романюк</createdby>
+												<status>Failed</status>
+												<assignedto></assignedto>
+												<comment></comment>
+																		<version></version>
+																														<elapsed></elapsed>
+																														<defects></defects>
+																														<custom>
+														<step_results><step>
+<index>1</index><content>Навести курсор на фал в поле &quot;Список файлов&quot; Hardload. Нажать правую кнопку мыши.</content><expected>Появляется меню в выпадающем списке.</expected><actual>Выпадающее меню не появилось.</actual><status>Failed</status></step>
+<step>
+<index>2</index><content>Проверить действия из выпадающего списка.</content><expected>Действия выполняются.</expected><actual>Выпадающее меню не появилось.</actual><status>Failed</status></step>
+</step_results>
+													</custom>
+											</change>
+									</changes>
+			</test>
+								</tests>
+							</section>
+		<section>
+		<name>Нефункциональные тесты (локализация).</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>Ромащёва</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Интерфейс пользователя</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Функциональные тесты</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Добавление в список и копирование файлов</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Удаление файлов из списка копирования</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+</sections>
+			</section>
+</sections>
+			</section>
+		<section>
+		<name>Shanaurina</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Функциональные тесты</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Добавление файлов и их копирование</name>
+		<description>Проверка возможностей программы копировать файлы разных типов и объемов</description>
+									</section>
+		<section>
+		<name>Удаление файлов из списка копирования</name>
+		<description>Проверка возможностей программы удалять файлы из списка копирования</description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>Нефункциональные тесты</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Удобство использования графического интерфейса</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+</sections>
+			</section>
+		<section>
+		<name>Ермаков</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Графический интерфейс</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>Сущенко</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>интерфейс пользователя</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Функциональные тесты</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+</sections>
+			</section>
+		<section>
+		<name>Игонин</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>GUI</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Функциональные тесты</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>Lavrik</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Графический интерфейс</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Функциональные тесты</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>Нелли К</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Графический интерфейс</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Функциональные тесты</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Проверить на удобство в использовании hardload.exe</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>климина</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>интерфейс пользователя</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>Яхонтова</name>
+		<description></description>
+										<sections>
+		<section>
+		<name>Графический интерфейс</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Функциональные тесты</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Нефункциональные тесты</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Отрицательные тесты</name>
+		<description></description>
+									</section>
+</sections>
+			</section>
+		<section>
+		<name>12</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Lavrik E</name>
+		<description></description>
+									</section>
+		<section>
+		<name>Нефункциональные тесты (локализация).</name>
+		<description></description>
+									</section>
+</sections>
+</run>

@@ -1,0 +1,1254 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:x="urn:schemas-microsoft-com:office:excel"
+      xmlns="http://www.w3.org/TR/REC-html40">
+    <head>
+        <title>Jira</title>
+        <style type="text/css">
+         table {
+             mso-displayed-decimal-separator:"\,";
+             mso-displayed-thousand-separator:" ";
+         }
+         body
+         {
+             margin: 0px;
+             font-size: 12px;
+             font-family: Arial, sans-serif;
+             color:black;
+         }
+
+        </style>
+        <META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+        <!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+        <!--
+             Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+             since Excel does not use or save the css files it is hardcoded here.
+           -->
+        <style>
+         @page
+         {
+             mso-page-orientation:landscape;
+             margin:.25in .25in .5in .25in;
+             mso-header-margin:.5in;
+             mso-footer-margin:.25in;
+             mso-footer-data:"&R&P of &N";
+             mso-horizontal-page-align:center;
+             mso-vertical-page-align:center;
+         }
+
+         td.issuekey,
+         td.issuetype,
+         td.status {
+             mso-style-parent: "";
+             mso-number-format: \@;
+             text-align: left;
+         }
+         br
+         {
+             mso-data-placement:same-cell;
+         }
+
+         td
+         {
+             vertical-align: top;
+         }
+        </style>
+
+        <!--[if gte mso 9]><xml>
+            <x:ExcelWorkbook>
+            <x:ExcelWorksheets>
+            <x:ExcelWorksheet>
+            <x:Name>general_report</x:Name>
+            <x:WorksheetOptions>
+            <x:Print>
+            <x:ValidPrinterInfo/>
+            </x:Print>
+            </x:WorksheetOptions>
+            </x:ExcelWorksheet>
+            </x:ExcelWorksheets>
+            </x:ExcelWorkbook>
+            </xml><![endif]-->
+    </head>
+    <body>
+
+        <table border="1">
+            <tr bgcolor="#0747a6" height="30">
+                <td colspan="44">
+                    <img src="http://89.223.126.182:8080/images/jira-software.png" width="57" height="30" border="0" alt="Jira">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="44">
+                    <a href="http://89.223.126.182:8080/issues/?jql=project+%3D+HAR+AND+assignee+in+%28currentUser%28%29%29">Jira</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="44">
+                    Отображение <strong>13</strong> запросов в <strong>23/фев/21 9:40 PM</strong>.
+                </td>
+            </tr>
+        </table>
+
+        
+
+
+                            <issuetable-web-component data-content="issues">
+                <table id="issuetable"  border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-project" data-id="project">
+                            Проект
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                            Код
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                            Тема
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                            Тип задачи
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status" data-id="status">
+                            Статус
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-priority" data-id="priority">
+                            Приоритет
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolution" data-id="resolution">
+                            Решение
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee" data-id="assignee">
+                            Исполнитель
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-reporter" data-id="reporter">
+                            Автор
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-creator" data-id="creator">
+                            Создатель
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-created" data-id="created">
+                            Cоздано
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-lastViewed" data-id="lastViewed">
+                            Последний просмотр
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-updated" data-id="updated">
+                            Обновленo
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolutiondate" data-id="resolutiondate">
+                            Дата решения
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-versions" data-id="versions">
+                            Затронуты версии
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-fixVersions" data-id="fixVersions">
+                            Исправить в версиях
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-components" data-id="components">
+                            Компоненты
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-duedate" data-id="duedate">
+                            Срок исполнения
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-votes" data-id="votes">
+                            Голоса
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-watches" data-id="watches">
+                            Наблюдатели
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-thumbnail" data-id="thumbnail">
+                            Изображения
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeoriginalestimate" data-id="timeoriginalestimate">
+                            Первоначальная оценка
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeestimate" data-id="timeestimate">
+                            Оставшееся время
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timespent" data-id="timespent">
+                            Затраченное время
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-workratio" data-id="workratio">
+                            КПД (полезная работа/затраченная работа)
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-subtasks" data-id="subtasks">
+                            Подзадачи
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuelinks" data-id="issuelinks">
+                            Связанные задачи
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-environment" data-id="environment">
+                            Окружение
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-description" data-id="description">
+                            Описание
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-security" data-id="security">
+                            Уровень безопасности
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-progress" data-id="progress">
+                            Прогресс
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregateprogress" data-id="aggregateprogress">
+                            Суммарный прогресс
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimespent" data-id="aggregatetimespent">
+                            Суммарное затраченое время
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeestimate" data-id="aggregatetimeestimate">
+                            Суммарное оставшееся время
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeoriginalestimate" data-id="aggregatetimeoriginalestimate">
+                            Суммарная первоначальная оценка
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-labels" data-id="labels">
+                            Метки
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10104" data-id="customfield_10104">
+                            Sprint
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10105" data-id="customfield_10105">
+                            Rank
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10106" data-id="customfield_10106">
+                            Story Points
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10000" data-id="customfield_10000">
+                            Development
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10100" data-id="customfield_10100">
+                            Epic Link
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10101" data-id="customfield_10101">
+                            Epic Status
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10102" data-id="customfield_10102">
+                            Epic Name
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10103" data-id="customfield_10103">
+                            Epic Color
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow10363" rel="10363" data-issuekey="HAR-119" class="issuerow">
+                                            <td class="project">    HardLoad
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HAR-119" href="http://89.223.126.182:8080/browse/HAR-119">HAR-119</a>
+</td>
+                                            <td class="summary"><p>
+                Орфографическая ошибка.
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Ярослав Романюк
+    </td>
+                                            <td class="reporter">            Ярослав Романюк
+    </td>
+                                            <td class="creator">            Ярослав Романюк
+    </td>
+                                            <td class="created"> 23/фев/21 8:31 PM </td>
+                                            <td class="lastViewed"> 23/фев/21 9:40 PM </td>
+                                            <td class="updated"> 23/фев/21 8:31 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">                        <a href="http://89.223.126.182:8080/secure/attachment/10011/_thumb_10011.png">
+            _thumb_10011.png
+        </a>
+                </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Окно выбора пути для копирования (куда складыват).
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">Романюк Ярослав</td>
+                                            <td class="customfield_10105">      0|i0027j:
+  </td>
+                                            <td class="customfield_10106"></td>
+                                            <td class="customfield_10000">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="customfield_10101"></td>
+                                            <td class="customfield_10102"></td>
+                                            <td class="customfield_10103"></td>
+                    </tr>
+
+
+                <tr id="issuerow10362" rel="10362" data-issuekey="HAR-118" class="issuerow">
+                                            <td class="project">    HardLoad
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HAR-118" href="http://89.223.126.182:8080/browse/HAR-118">HAR-118</a>
+</td>
+                                            <td class="summary"><p>
+                Разные языки в окнах.
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Ярослав Романюк
+    </td>
+                                            <td class="reporter">            Ярослав Романюк
+    </td>
+                                            <td class="creator">            Ярослав Романюк
+    </td>
+                                            <td class="created"> 23/фев/21 8:29 PM </td>
+                                            <td class="lastViewed"> 23/фев/21 8:30 PM </td>
+                                            <td class="updated"> 23/фев/21 8:30 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">                        <a href="http://89.223.126.182:8080/secure/attachment/10010/_thumb_10010.png">
+            _thumb_10010.png
+        </a>
+                                    <a href="http://89.223.126.182:8080/secure/attachment/10009/_thumb_10009.png">
+            _thumb_10009.png
+        </a>
+                </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Часть на английском (choose file), часть на русском (куда складывать файл).
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">Романюк Ярослав</td>
+                                            <td class="customfield_10105">      0|i0027b:
+  </td>
+                                            <td class="customfield_10106"></td>
+                                            <td class="customfield_10000">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="customfield_10101"></td>
+                                            <td class="customfield_10102"></td>
+                                            <td class="customfield_10103"></td>
+                    </tr>
+
+
+                <tr id="issuerow10283" rel="10283" data-issuekey="HAR-89" class="issuerow">
+                                            <td class="project">    HardLoad
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HAR-89" href="http://89.223.126.182:8080/browse/HAR-89">HAR-89</a>
+</td>
+                                            <td class="summary"><p>
+                Копирование при указании некорректного пути.
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Ярослав Романюк
+    </td>
+                                            <td class="reporter">            Ярослав Романюк
+    </td>
+                                            <td class="creator">            Ярослав Романюк
+    </td>
+                                            <td class="created"> 22/фев/21 3:55 PM </td>
+                                            <td class="lastViewed"> 22/фев/21 3:58 PM </td>
+                                            <td class="updated"> 22/фев/21 3:55 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Если в поле &quot;to:&quot; ввести несуществующий путь для копирования, то вместо ожидаемого сообщения &quot;Путь не существует&quot; ничего не происходит. Копирование как бы начинается, но ничего не происходит.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">Романюк Ярослав</td>
+                                            <td class="customfield_10105">      0|i001qf:
+  </td>
+                                            <td class="customfield_10106"></td>
+                                            <td class="customfield_10000">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="customfield_10101"></td>
+                                            <td class="customfield_10102"></td>
+                                            <td class="customfield_10103"></td>
+                    </tr>
+
+
+                <tr id="issuerow10282" rel="10282" data-issuekey="HAR-88" class="issuerow">
+                                            <td class="project">    HardLoad
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HAR-88" href="http://89.223.126.182:8080/browse/HAR-88">HAR-88</a>
+</td>
+                                            <td class="summary"><p>
+                Повторное копирование файлов.
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Ярослав Романюк
+    </td>
+                                            <td class="reporter">            Ярослав Романюк
+    </td>
+                                            <td class="creator">            Ярослав Романюк
+    </td>
+                                            <td class="created"> 22/фев/21 3:49 PM </td>
+                                            <td class="lastViewed"> 22/фев/21 3:49 PM </td>
+                                            <td class="updated"> 22/фев/21 3:49 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      При попытке скопировать дубль уже существующего файла не появляется предупреждение, что файл уже существует.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">Романюк Ярослав</td>
+                                            <td class="customfield_10105">      0|i001q7:
+  </td>
+                                            <td class="customfield_10106"></td>
+                                            <td class="customfield_10000">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="customfield_10101"></td>
+                                            <td class="customfield_10102"></td>
+                                            <td class="customfield_10103"></td>
+                    </tr>
+
+
+                <tr id="issuerow10281" rel="10281" data-issuekey="HAR-87" class="issuerow">
+                                            <td class="project">    HardLoad
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HAR-87" href="http://89.223.126.182:8080/browse/HAR-87">HAR-87</a>
+</td>
+                                            <td class="summary"><p>
+                Дублирование файлов в списке на копирование.
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Ярослав Романюк
+    </td>
+                                            <td class="reporter">            Ярослав Романюк
+    </td>
+                                            <td class="creator">            Ярослав Романюк
+    </td>
+                                            <td class="created"> 22/фев/21 3:47 PM </td>
+                                            <td class="lastViewed"> 22/фев/21 3:47 PM </td>
+                                            <td class="updated"> 22/фев/21 3:47 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">                        <a href="http://89.223.126.182:8080/secure/attachment/10008/_thumb_10008.png">
+            _thumb_10008.png
+        </a>
+                </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      При добавлении в список для копирования файла, уже существующего в списке, файл дублируется в списке.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">Романюк Ярослав</td>
+                                            <td class="customfield_10105">      0|i001pz:
+  </td>
+                                            <td class="customfield_10106"></td>
+                                            <td class="customfield_10000">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="customfield_10101"></td>
+                                            <td class="customfield_10102"></td>
+                                            <td class="customfield_10103"></td>
+                    </tr>
+
+
+                <tr id="issuerow10280" rel="10280" data-issuekey="HAR-86" class="issuerow">
+                                            <td class="project">    HardLoad
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HAR-86" href="http://89.223.126.182:8080/browse/HAR-86">HAR-86</a>
+</td>
+                                            <td class="summary"><p>
+                Изменение списка файлов для копирования с помощью правой кнопки мыши.
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Ярослав Романюк
+    </td>
+                                            <td class="reporter">            Ярослав Романюк
+    </td>
+                                            <td class="creator">            Ярослав Романюк
+    </td>
+                                            <td class="created"> 22/фев/21 3:43 PM </td>
+                                            <td class="lastViewed"> 22/фев/21 3:43 PM </td>
+                                            <td class="updated"> 22/фев/21 3:43 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Изменение списка файлов для копирования с помощью правой кнопки мыши: при нажатии нет выпадающего списка, привычного для Windows.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">Романюк Ярослав</td>
+                                            <td class="customfield_10105">      0|i001pr:
+  </td>
+                                            <td class="customfield_10106"></td>
+                                            <td class="customfield_10000">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="customfield_10101"></td>
+                                            <td class="customfield_10102"></td>
+                                            <td class="customfield_10103"></td>
+                    </tr>
+
+
+                <tr id="issuerow10279" rel="10279" data-issuekey="HAR-85" class="issuerow">
+                                            <td class="project">    HardLoad
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HAR-85" href="http://89.223.126.182:8080/browse/HAR-85">HAR-85</a>
+</td>
+                                            <td class="summary"><p>
+                Удаление файла из списка копирования клавишей Del.
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Ярослав Романюк
+    </td>
+                                            <td class="reporter">            Ярослав Романюк
+    </td>
+                                            <td class="creator">            Ярослав Романюк
+    </td>
+                                            <td class="created"> 22/фев/21 3:41 PM </td>
+                                            <td class="lastViewed"> 22/фев/21 3:41 PM </td>
+                                            <td class="updated"> 22/фев/21 3:41 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Не реализована возможность удалить файл из списка копирования с использованием клавиши Del.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">Романюк Ярослав</td>
+                                            <td class="customfield_10105">      0|i001pj:
+  </td>
+                                            <td class="customfield_10106"></td>
+                                            <td class="customfield_10000">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="customfield_10101"></td>
+                                            <td class="customfield_10102"></td>
+                                            <td class="customfield_10103"></td>
+                    </tr>
+
+
+                <tr id="issuerow10278" rel="10278" data-issuekey="HAR-84" class="issuerow">
+                                            <td class="project">    HardLoad
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HAR-84" href="http://89.223.126.182:8080/browse/HAR-84">HAR-84</a>
+</td>
+                                            <td class="summary"><p>
+                Добавление файла в список копирования перетаскиванием из папки.
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Ярослав Романюк
+    </td>
+                                            <td class="reporter">            Ярослав Романюк
+    </td>
+                                            <td class="creator">            Ярослав Романюк
+    </td>
+                                            <td class="created"> 22/фев/21 3:39 PM </td>
+                                            <td class="lastViewed"> 22/фев/21 3:39 PM </td>
+                                            <td class="updated"> 22/фев/21 3:39 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Привычный для Windows способ добавления файла(ов) в список копирования методом перетаскивания из папки не реализован.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">Романюк Ярослав</td>
+                                            <td class="customfield_10105">      0|i001pb:
+  </td>
+                                            <td class="customfield_10106"></td>
+                                            <td class="customfield_10000">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="customfield_10101"></td>
+                                            <td class="customfield_10102"></td>
+                                            <td class="customfield_10103"></td>
+                    </tr>
+
+
+                <tr id="issuerow10277" rel="10277" data-issuekey="HAR-83" class="issuerow">
+                                            <td class="project">    HardLoad
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HAR-83" href="http://89.223.126.182:8080/browse/HAR-83">HAR-83</a>
+</td>
+                                            <td class="summary"><p>
+                Изменение окна рабочей области.
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Ярослав Романюк
+    </td>
+                                            <td class="reporter">            Ярослав Романюк
+    </td>
+                                            <td class="creator">            Ярослав Романюк
+    </td>
+                                            <td class="created"> 22/фев/21 3:36 PM </td>
+                                            <td class="lastViewed"> 22/фев/21 3:36 PM </td>
+                                            <td class="updated"> 22/фев/21 3:36 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Нет возможности изменить окно рабочей области. Попытки сделать это привычными для Windows способами (нажать на &quot;квадратик&quot; в верхнем правом углу, двойной клик левой кнопкой мыши по верхней рамке, попытка растянуть окно за угол) ничего не меняют.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">Романюк Ярослав</td>
+                                            <td class="customfield_10105">      0|i001p3:
+  </td>
+                                            <td class="customfield_10106"></td>
+                                            <td class="customfield_10000">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="customfield_10101"></td>
+                                            <td class="customfield_10102"></td>
+                                            <td class="customfield_10103"></td>
+                    </tr>
+
+
+                <tr id="issuerow10276" rel="10276" data-issuekey="HAR-82" class="issuerow">
+                                            <td class="project">    HardLoad
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HAR-82" href="http://89.223.126.182:8080/browse/HAR-82">HAR-82</a>
+</td>
+                                            <td class="summary"><p>
+                Понятность интерфейса: кнопка приостановить.
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Ярослав Романюк
+    </td>
+                                            <td class="reporter">            Ярослав Романюк
+    </td>
+                                            <td class="creator">            Ярослав Романюк
+    </td>
+                                            <td class="created"> 22/фев/21 3:33 PM </td>
+                                            <td class="lastViewed"> 22/фев/21 3:33 PM </td>
+                                            <td class="updated"> 22/фев/21 3:33 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">                        <a href="http://89.223.126.182:8080/secure/attachment/10007/_thumb_10007.png">
+            _thumb_10007.png
+        </a>
+                </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      При нажатии на кнопку с общепринятым обозначением &quot;Пауза&quot; ожидает приостановки загрузки, а по факту загрузка прекращается (отмена загрузки).
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">Романюк Ярослав</td>
+                                            <td class="customfield_10105">      0|i001ov:
+  </td>
+                                            <td class="customfield_10106"></td>
+                                            <td class="customfield_10000">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="customfield_10101"></td>
+                                            <td class="customfield_10102"></td>
+                                            <td class="customfield_10103"></td>
+                    </tr>
+
+
+                <tr id="issuerow10275" rel="10275" data-issuekey="HAR-81" class="issuerow">
+                                            <td class="project">    HardLoad
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HAR-81" href="http://89.223.126.182:8080/browse/HAR-81">HAR-81</a>
+</td>
+                                            <td class="summary"><p>
+                При наведении курсора на кнопку &quot;Остановить копирование&quot; не всплывает подсказка
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Ярослав Романюк
+    </td>
+                                            <td class="reporter">            Ярослав Романюк
+    </td>
+                                            <td class="creator">            Ярослав Романюк
+    </td>
+                                            <td class="created"> 22/фев/21 3:30 PM </td>
+                                            <td class="lastViewed"> 22/фев/21 3:30 PM </td>
+                                            <td class="updated"> 22/фев/21 3:30 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">                        <a href="http://89.223.126.182:8080/secure/attachment/10006/_thumb_10006.png">
+            _thumb_10006.png
+        </a>
+                                    <a href="http://89.223.126.182:8080/secure/attachment/10005/_thumb_10005.png">
+            _thumb_10005.png
+        </a>
+                </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      При наведении курсора на кнопку &quot;Остановить копирование&quot; не всплывает подсказка в отличие от всех остальных кнопок.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">Романюк Ярослав</td>
+                                            <td class="customfield_10105">      0|i001on:
+  </td>
+                                            <td class="customfield_10106"></td>
+                                            <td class="customfield_10000">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="customfield_10101"></td>
+                                            <td class="customfield_10102"></td>
+                                            <td class="customfield_10103"></td>
+                    </tr>
+
+
+                <tr id="issuerow10272" rel="10272" data-issuekey="HAR-80" class="issuerow">
+                                            <td class="project">    HardLoad
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HAR-80" href="http://89.223.126.182:8080/browse/HAR-80">HAR-80</a>
+</td>
+                                            <td class="summary"><p>
+                Размер кнопок в верхней строке программного интерфейса.
+    </p>
+</td>
+                                            <td class="issuetype">    Ошибка
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Сделать&lt;/span&gt;">Сделать</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Ярослав Романюк
+    </td>
+                                            <td class="reporter">            Ярослав Романюк
+    </td>
+                                            <td class="creator">            Ярослав Романюк
+    </td>
+                                            <td class="created"> 22/фев/21 3:06 PM </td>
+                                            <td class="lastViewed"> 22/фев/21 3:08 PM </td>
+                                            <td class="updated"> 22/фев/21 3:10 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">                        <a href="http://89.223.126.182:8080/secure/attachment/10004/_thumb_10004.png">
+            _thumb_10004.png
+        </a>
+                </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Кнопки имеют разный размер:<br/>
+-Кнопка &quot;Найти и добавить файл в список&quot; 35х28 рх.<br/>
+-Кнопка &quot;Удалить выделенные файлы из списка&quot; 32х25 рх.<br/>
+-Кнопка &quot;Начать грузить&quot; 32х32 рх.<br/>
+-Кнопка &quot;Приостановить&quot; 37х30 рх.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">Романюк Ярослав</td>
+                                            <td class="customfield_10105">      0|i001nz:
+  </td>
+                                            <td class="customfield_10106"></td>
+                                            <td class="customfield_10000">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="customfield_10101"></td>
+                                            <td class="customfield_10102"></td>
+                                            <td class="customfield_10103"></td>
+                    </tr>
+
+
+                <tr id="issuerow10022" rel="10022" data-issuekey="HAR-23" class="issuerow">
+                                            <td class="project">    HardLoad
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="HAR-23" href="http://89.223.126.182:8080/browse/HAR-23">HAR-23</a>
+</td>
+                                            <td class="summary"><p>
+                Составить и внести план тестирования hardload.exe в TestRail (15 тестовых сценариев).
+    </p>
+</td>
+                                            <td class="issuetype">    История
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;В работе&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;В данный момент по этой проблеме ведется активная работа назначенным лицом.&lt;/span&gt;">В работе</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">            Ярослав Романюк
+    </td>
+                                            <td class="reporter">            Ярослав Романюк
+    </td>
+                                            <td class="creator">            Ярослав Романюк
+    </td>
+                                            <td class="created"> 13/фев/21 1:46 PM </td>
+                                            <td class="lastViewed"> 21/фев/21 8:03 PM </td>
+                                            <td class="updated"> 21/фев/21 8:04 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks">                </td>
+                                            <td class="issuelinks">                </td>
+                                            <td class="environment"></td>
+                                            <td class="description">      Составить и внести план тестирования hardload.exe в TestRail (15 тестовых сценариев).
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress">     
+</td>
+                                            <td class="aggregateprogress">     
+</td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    </td>
+                                            <td class="customfield_10104">Спринт1</td>
+                                            <td class="customfield_10105">      0|i0004u:
+  </td>
+                                            <td class="customfield_10106"></td>
+                                            <td class="customfield_10000">    <div class='dev-status-column-view-wrapper'></div>
+</td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="customfield_10101"></td>
+                                            <td class="customfield_10102"></td>
+                                            <td class="customfield_10103"></td>
+                    </tr>
+                </tbody>
+    </table>
+    </issuetable-web-component>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#f5f5f5" colspan="44"><font size="1">
+        Полученный Tue Feb 23 17:40:38 MSK 2021 Ярослав Романюк используя Jira 8.13.0#813000-sha1:8c68d8036d917652ef7564456d59d80184b5a77e.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>
