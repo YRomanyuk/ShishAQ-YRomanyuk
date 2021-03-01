@@ -1,0 +1,81 @@
+3<!DOCTYPE html>
+<!-- saved from url=(0025)http://qa.noveogroup.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Test assignment QA</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<style type="text/css">
+.xplq {
+  color: grey; 
+  text-align: right;
+  font-size: small;
+}
+</style>
+<body>
+<main role="main" class="container">
+  <div class="content">
+    <h1 class="text-center">Registration form</h1>
+    <div class="form-wrapper">
+  
+  <form method="post">
+    <fieldset>
+              <div class="form-group">
+          <label for="name">
+            Name            <span>*</span>          </label>
+
+                      <input type="text" name="name" id="name" placeholder="" value="" class="form-control ">
+          
+                  </div>
+                <p class="xplq">2 characters or more</p>
+              <div class="form-group">
+          <label for="email">
+            E-mail            <span>*</span>          </label>
+
+                      <input type="text" name="email" id="email" placeholder="" value="" class="form-control ">
+          
+                  </div>
+              <div class="form-group">
+          <label for="password">
+            Password            <span>*</span>          </label>
+
+                      <input type="password" name="password" id="password" placeholder="" value="" class="form-control ">
+          
+                  </div>
+                  <p class="xplq">8 characters or more</p>
+              <div class="form-group">
+          <label for="repeat_password">
+            Repeat password            <span>*</span>          </label>
+
+                      <input type="password" name="repeat_password" id="repeat_password" placeholder="" value="" class="form-control ">
+          
+                  </div>
+              <div class="form-group">
+          <label for="birthday">
+            Birthday            <span>*</span>          </label>
+
+                      <input type="text" name="birthday" id="birthday" placeholder="DD/MM/YYYY" value="" class="form-control ">
+          
+                  </div>
+              <div class="form-group">
+          <label for="description">
+            Description                      </label>
+
+                      <textarea name="description" id="description" class="form-control "></textarea>
+          
+                  </div>
+                  <em>fields marked with * are mandatory</em>
+      
+      <!-- Fake bug : Hidden text -->
+      <div class="alert alert-light" role="alert">Click Register to send form.</div>
+
+      <button type="submit" class="btn btn-primary">Register</button>
+    </fieldset>
+  </form>
+</div>
+  </div>
+</main>
+<script src="index.js"></script>
+
+
+</body></html>
