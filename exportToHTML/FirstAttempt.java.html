@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>FirstAttempt.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+FirstAttempt.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">org.openqa.selenium.By</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.WebDriver</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.chrome.ChromeDriver</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.openqa.selenium.support.ui.Select</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.testng.annotations.AfterClass</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.testng.annotations.BeforeClass</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.testng.annotations.Test</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.util.concurrent.TimeUnit</span><span class="s0">;</span>
+
+<span class="s0">import static </span><span class="s1">org.testng.Assert.assertEquals</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">FirstAttempt {</span>
+    <span class="s0">private </span><span class="s1">WebDriver driver</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">String baseUrl</span><span class="s0">;</span>
+
+    <span class="s1">@BeforeClass(alwaysRun = </span><span class="s0">true</span><span class="s1">)</span>
+    <span class="s0">public void </span><span class="s1">setUp() </span><span class="s0">throws </span><span class="s1">Exception {</span>
+        <span class="s1">System.setProperty(</span><span class="s2">&quot;webdriver.chrome.driver&quot;</span><span class="s0">, </span><span class="s2">&quot;src</span><span class="s0">\\</span><span class="s2">test</span><span class="s0">\\</span><span class="s2">java</span><span class="s0">\\</span><span class="s2">chromedriver.exe&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">driver = </span><span class="s0">new </span><span class="s1">ChromeDriver()</span><span class="s0">;</span>
+        <span class="s1">baseUrl = </span><span class="s2">&quot;https://sandbox.cardpay.com/MI/cardpayment2.html?orderXml=PE9SREVSIFdBTExFVF9JRD0nODI5OScgT1JERVJfTlVNQkVSPSc0NTgyMTEnIEFNT1VOVD0nMjkxLjg2JyBDVVJSRU5DWT0nRVVSJyAgRU1BSUw9J2N1c3RvbWVyQGV4YW1wbGUuY29tJz4KPEFERFJFU1MgQ09VTlRSWT0nVVNBJyBTVEFURT0nTlknIFpJUD0nMTAwMDEnIENJVFk9J05ZJyBTVFJFRVQ9JzY3NyBTVFJFRVQnIFBIT05FPSc4NzY5OTA5MCcgVFlQRT0nQklMTElORycvPgo8L09SREVSPg==&amp;sha512=998150a2b27484b776a1628bfe7505a9cb430f276dfa35b14315c1c8f03381a90490f6608f0dcff789273e05926cd782e1bb941418a9673f43c47595aa7b8b0d&quot;</span><span class="s0">;</span>
+        <span class="s1">driver.manage().timeouts().implicitlyWait(</span><span class="s3">30</span><span class="s0">, </span><span class="s1">TimeUnit.SECONDS)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">testConfirmedTestCase() </span><span class="s0">throws </span><span class="s1">Exception {</span>
+        <span class="s1">driver.get(baseUrl)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;input-card-number&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;4000000000000002&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;input-card-holder&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;MIKE KIN&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">new </span><span class="s1">Select(driver.findElement(By.id(</span><span class="s2">&quot;card-expires-month&quot;</span><span class="s1">))).selectByVisibleText(</span><span class="s2">&quot;07&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">new </span><span class="s1">Select(driver.findElement(By.id(</span><span class="s2">&quot;card-expires-year&quot;</span><span class="s1">))).selectByVisibleText(</span><span class="s2">&quot;2037&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;input-card-cvc&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;777&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;action-submit&quot;</span><span class="s1">)).click()</span><span class="s0">;</span>
+        <span class="s1">assertEquals(driver.findElement(By.xpath(</span><span class="s2">&quot;//div[@id='payment-item-status']/div[2]&quot;</span><span class="s1">)).getText()</span><span class="s0">, </span><span class="s2">&quot;Confirmed&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">assertEquals(driver.findElement(By.xpath(</span><span class="s2">&quot;//div[@id='payment-item-cardholder']/div[2]&quot;</span><span class="s1">)).getText()</span><span class="s0">, </span><span class="s2">&quot;MIKE KIN&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">assertEquals(driver.findElement(By.id(</span><span class="s2">&quot;payment-item-total-amount&quot;</span><span class="s1">)).getText()</span><span class="s0">, </span><span class="s2">&quot;291.86&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">testDeclinedTestCase() </span><span class="s0">throws </span><span class="s1">Exception {</span>
+        <span class="s1">driver.get(baseUrl)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;input-card-number&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;5555555555554444&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;input-card-holder&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;MIKE KIN&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">new </span><span class="s1">Select(driver.findElement(By.id(</span><span class="s2">&quot;card-expires-month&quot;</span><span class="s1">))).selectByVisibleText(</span><span class="s2">&quot;07&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">new </span><span class="s1">Select(driver.findElement(By.id(</span><span class="s2">&quot;card-expires-year&quot;</span><span class="s1">))).selectByVisibleText(</span><span class="s2">&quot;2037&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;input-card-cvc&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;007&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;action-submit&quot;</span><span class="s1">)).click()</span><span class="s0">;</span>
+
+        <span class="s1">assertEquals(driver.findElement(By.xpath(</span><span class="s2">&quot;//div[@id='payment-item-status']/div[2]&quot;</span><span class="s1">)).getText()</span><span class="s0">, </span><span class="s2">&quot;Declined by issuing bank&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">assertEquals(driver.findElement(By.xpath(</span><span class="s2">&quot;//div[@id='payment-item-cardholder']/div[2]&quot;</span><span class="s1">)).getText()</span><span class="s0">, </span><span class="s2">&quot;MIKE KIN&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">assertEquals(driver.findElement(By.id(</span><span class="s2">&quot;payment-item-total-amount&quot;</span><span class="s1">)).getText()</span><span class="s0">, </span><span class="s2">&quot;291.86&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">testAuthorizedTestCase() </span><span class="s0">throws </span><span class="s1">Exception {</span>
+        <span class="s1">driver.get(baseUrl)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;input-card-number&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;4000000000000077&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;input-card-holder&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;MIKE KIN&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">new </span><span class="s1">Select(driver.findElement(By.id(</span><span class="s2">&quot;card-expires-month&quot;</span><span class="s1">))).selectByVisibleText(</span><span class="s2">&quot;07&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">new </span><span class="s1">Select(driver.findElement(By.id(</span><span class="s2">&quot;card-expires-year&quot;</span><span class="s1">))).selectByVisibleText(</span><span class="s2">&quot;2037&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;input-card-cvc&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;007&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;action-submit&quot;</span><span class="s1">)).click()</span><span class="s0">;</span>
+
+        <span class="s1">assertEquals(driver.findElement(By.xpath(</span><span class="s2">&quot;//div[@id='payment-item-status']/div[2]&quot;</span><span class="s1">)).getText()</span><span class="s0">, </span><span class="s2">&quot;Confirmed&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">assertEquals(driver.findElement(By.xpath(</span><span class="s2">&quot;//div[@id='payment-item-cardholder']/div[2]&quot;</span><span class="s1">)).getText()</span><span class="s0">, </span><span class="s2">&quot;MIKE KIN&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">assertEquals(driver.findElement(By.id(</span><span class="s2">&quot;payment-item-total-amount&quot;</span><span class="s1">)).getText()</span><span class="s0">, </span><span class="s2">&quot;291.86&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">testCardSnotValidTestCase() </span><span class="s0">throws </span><span class="s1">Exception {</span>
+        <span class="s1">driver.get(baseUrl)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;input-card-number&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;0000000000000036&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;input-card-holder&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;МАЙК КИН&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">new </span><span class="s1">Select(driver.findElement(By.id(</span><span class="s2">&quot;card-expires-month&quot;</span><span class="s1">))).selectByVisibleText(</span><span class="s2">&quot;07&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">new </span><span class="s1">Select(driver.findElement(By.id(</span><span class="s2">&quot;card-expires-year&quot;</span><span class="s1">))).selectByVisibleText(</span><span class="s2">&quot;2037&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;input-card-cvc&quot;</span><span class="s1">)).sendKeys(</span><span class="s2">&quot;007&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s2">&quot;action-submit&quot;</span><span class="s1">)).click()</span><span class="s0">;</span>
+
+        <span class="s1">assertEquals(driver.findElement(By.xpath(</span><span class="s2">&quot;//div[@id='card-holder-field']/div/label&quot;</span><span class="s1">)).getText()</span><span class="s0">, </span><span class="s2">&quot;Cardholder name is not valid&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">assertEquals(driver.findElement(By.xpath(</span><span class="s2">&quot;//div[@id='card-number-field']/div/label&quot;</span><span class="s1">)).getText()</span><span class="s0">, </span><span class="s2">&quot;Card number is not valid&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+    <span class="s1">@AfterClass(alwaysRun = </span><span class="s0">true</span><span class="s1">)</span>
+    <span class="s0">public void </span><span class="s1">tearDown() </span><span class="s0">throws </span><span class="s1">Exception {</span>
+
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
