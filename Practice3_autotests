@@ -30,10 +30,13 @@ public class FirstAttempt {
         new Select(driver.findElement(By.id("card-expires-month"))).selectByVisibleText("07");
         new Select(driver.findElement(By.id("card-expires-year"))).selectByVisibleText("2037");
         driver.findElement(By.id("input-card-cvc")).sendKeys("777");
+
         driver.findElement(By.id("action-submit")).click();
+        driver.findElement(By.id("success")).submit();
         assertEquals(driver.findElement(By.xpath("//div[@id='payment-item-status']/div[2]")).getText(), "Confirmed");
         assertEquals(driver.findElement(By.xpath("//div[@id='payment-item-cardholder']/div[2]")).getText(), "MIKE KIN");
         assertEquals(driver.findElement(By.id("payment-item-total-amount")).getText(), "291.86");
+
     }
     @Test
     public void testDeclinedTestCase() throws Exception {
@@ -44,7 +47,7 @@ public class FirstAttempt {
         new Select(driver.findElement(By.id("card-expires-year"))).selectByVisibleText("2037");
         driver.findElement(By.id("input-card-cvc")).sendKeys("007");
         driver.findElement(By.id("action-submit")).click();
-
+        driver.findElement(By.id("failure")).submit();
         assertEquals(driver.findElement(By.xpath("//div[@id='payment-item-status']/div[2]")).getText(), "Declined by issuing bank");
         assertEquals(driver.findElement(By.xpath("//div[@id='payment-item-cardholder']/div[2]")).getText(), "MIKE KIN");
         assertEquals(driver.findElement(By.id("payment-item-total-amount")).getText(), "291.86");
