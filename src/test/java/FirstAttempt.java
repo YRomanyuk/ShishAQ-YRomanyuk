@@ -1,11 +1,17 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.AShot;
 
+import javax.imageio.ImageIO;
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertEquals;
@@ -13,6 +19,7 @@ import static org.testng.Assert.assertEquals;
 public class FirstAttempt {
     private WebDriver driver;
     private String baseUrl;
+
 
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
@@ -24,16 +31,23 @@ public class FirstAttempt {
 
     @Test
     public void testConfirmedTestCase() throws Exception {
+        Actions action = new Actions(driver);
         driver.get(baseUrl);
         driver.findElement(By.id("input-card-number")).sendKeys("4000000000000002");
         driver.findElement(By.id("input-card-holder")).sendKeys("MIKE KIN");
         new Select(driver.findElement(By.id("card-expires-month"))).selectByVisibleText("07");
         new Select(driver.findElement(By.id("card-expires-year"))).selectByVisibleText("2037");
         driver.findElement(By.id("input-card-cvc")).sendKeys("777");
+        WebElement cvcHint = driver.findElement(By.xpath("//*[@id=\"cvc-hint-toggle\"]"));
+        action.moveToElement(cvcHint).build().perform();
+        Screenshot screenshot = new AShot().takeScreenshot(driver);
+        ImageIO.write(screenshot.getImage(), "png", new File("Screenshots\\Screenshot.png"));
         driver.findElement(By.id("action-submit")).click();
+        driver.findElement(By.id("success")).submit();
         assertEquals(driver.findElement(By.xpath("//div[@id='payment-item-status']/div[2]")).getText(), "Confirmed");
         assertEquals(driver.findElement(By.xpath("//div[@id='payment-item-cardholder']/div[2]")).getText(), "MIKE KIN");
         assertEquals(driver.findElement(By.id("payment-item-total-amount")).getText(), "291.86");
+
     }
     @Test
     public void testDeclinedTestCase() throws Exception {
@@ -44,7 +58,7 @@ public class FirstAttempt {
         new Select(driver.findElement(By.id("card-expires-year"))).selectByVisibleText("2037");
         driver.findElement(By.id("input-card-cvc")).sendKeys("007");
         driver.findElement(By.id("action-submit")).click();
-
+        driver.findElement(By.id("failure")).submit();
         assertEquals(driver.findElement(By.xpath("//div[@id='payment-item-status']/div[2]")).getText(), "Declined by issuing bank");
         assertEquals(driver.findElement(By.xpath("//div[@id='payment-item-cardholder']/div[2]")).getText(), "MIKE KIN");
         assertEquals(driver.findElement(By.id("payment-item-total-amount")).getText(), "291.86");
@@ -80,4 +94,8 @@ public class FirstAttempt {
     public void tearDown() throws Exception {
 
     }
-}
+
+
+        }
+
+
